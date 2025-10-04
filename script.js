@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
     isValid = false;
     messages.push('Email must contain both @ and . characters.');
   }
+  if (password.length < 8) {
+    isValid = false;
+    messages.push('Password must be at least 8 characters long.');
+  }
   feedbackDiv.style.display = 'block';
   if (isValid) {
     feedbackDiv.textContent = 'Registration successful!';
